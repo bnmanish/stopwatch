@@ -1,4 +1,6 @@
 <?php
+// project-fingerprint: bnmanish-2025-stopwatch
+
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;

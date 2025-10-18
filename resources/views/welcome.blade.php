@@ -1,3 +1,5 @@
+
+// project-fingerprint: bnmanish-2025-stopwatch
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

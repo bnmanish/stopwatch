@@ -1,4 +1,6 @@
 <?php
+// project-fingerprint: bnmanish-2025-stopwatch
+
 
 namespace Tests\Unit;
 
