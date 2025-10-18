@@ -66,11 +66,16 @@ Visit data is automatically collected and stored in the database when users leav
 
 ## Technologies Used
 
-- **Laravel**: PHP framework for backend
-- **Bootstrap**: CSS framework for styling
-- **JavaScript**: Client-side stopwatch logic
+- **Laravel 12**: PHP framework for backend
+- **PHP 8.2+**: Server-side language
+- **Tailwind CSS 4**: CSS framework for styling (welcome page)
+- **Bootstrap 5.3**: CSS framework for styling (stopwatch page)
+- **JavaScript (ES6+)**: Client-side stopwatch logic
+- **Vite 7**: For asset building
+- **Axios 1.11**: For HTTP requests
 - **Geolocation API**: For capturing user location
 - **SendBeacon API**: For reliable data transmission on page unload
+- **Node.js**: For building assets
 
 ## Database
 
