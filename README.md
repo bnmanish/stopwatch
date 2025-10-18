@@ -1,61 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Stopwatch
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A web-based stopwatch application built with Laravel that tracks user interactions and visit analytics.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Stopwatch Functionality**: Start, stop, reset, and split time tracking with a visual rotating bullet indicator.
+- **Split Times**: Record and display split times in a table.
+- **Responsive Design**: Built with Bootstrap for mobile and desktop compatibility.
+- **Visit Analytics**: Automatically tracks user visits including:
+  - Device type (mobile/desktop)
+  - User agent
+  - IP address
+  - Geolocation (latitude/longitude)
+  - Time spent on the page
+  - Visit timestamp
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/stopwatch.git
+   cd stopwatch
+   ```
 
-## Learning Laravel
+2. Install PHP dependencies:
+   ```bash
+   composer install
+   ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3. Install Node.js dependencies:
+   ```bash
+   npm install
+   ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+4. Copy the environment file and configure:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5. Run database migrations:
+   ```bash
+   php artisan migrate
+   ```
 
-## Laravel Sponsors
+6. Build assets:
+   ```bash
+   npm run build
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+7. Start the development server:
+   ```bash
+   php artisan serve
+   ```
 
-### Premium Partners
+## Usage
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Access the application in your browser at `http://localhost:8000`
+- Click "Start" to begin the stopwatch
+- Click "Split" to record split times while running
+- Click "Stop" to pause the stopwatch
+- Click "Reset" to reset the stopwatch and clear splits
 
-## Contributing
+Visit data is automatically collected and stored in the database when users leave the page.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Technologies Used
 
-## Code of Conduct
+- **Laravel**: PHP framework for backend
+- **Bootstrap**: CSS framework for styling
+- **JavaScript**: Client-side stopwatch logic
+- **Geolocation API**: For capturing user location
+- **SendBeacon API**: For reliable data transmission on page unload
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Database
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The application uses a `user_visits` table to store visit analytics. Migration is included in `database/migrations/`.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
