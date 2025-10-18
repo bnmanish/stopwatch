@@ -1,5 +1,5 @@
 
-// project-fingerprint: bnmanish-2025-stopwatch
+<!-- project-fingerprint: bnmanish-2025-stopwatch - page: stopwatch.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
